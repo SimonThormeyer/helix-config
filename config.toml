@@ -1,0 +1,26 @@
+theme = "mytheme"
+
+[editor]
+line-number = "relative"
+mouse = false
+
+[editor.auto-save]
+after-delay.enable = true
+after-delay.timeout = 500
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = true
+
+[editor.lsp]
+display-inlay-hints = true
+
+[keys.normal]
+C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+
+
