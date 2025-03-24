@@ -1,5 +1,6 @@
-[language-server.rust-analyzer.config.check]
-command = "clippy"
+[language-server.rust-analyzer.config]
+check.command = "clippy"
+cargo.target = "wasm32-unknown-unknown"
 
 [language-server.swiftlint]
 command = "swiftlint"
