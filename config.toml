@@ -29,4 +29,7 @@ C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_befor
 # Launch lazygit
 C-g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
 
+[keys.insert]
+j = { k = "normal_mode" } # Maps `jk` to exit insert mode
+
 
