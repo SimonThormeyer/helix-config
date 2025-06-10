@@ -13,6 +13,9 @@ cursor-line = "warning" # show warnings and errors on the cursorline inline
 after-delay.enable = true
 after-delay.timeout = 500
 
+[editor.indent-guides]
+render = true
+
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
