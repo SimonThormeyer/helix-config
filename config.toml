@@ -5,6 +5,7 @@ line-number = "relative"
 mouse = false
 end-of-line-diagnostics = "hint"
 completion-timeout = 5
+rulers = [120]
 
 [editor.inline-diagnostics]
 cursor-line = "warning" # show warnings and errors on the cursorline inline
@@ -32,6 +33,10 @@ C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 # Launch lazygit
 C-g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
+
+[keys.normal.space]
+A-L = [":toggle-option line-number relative absolute"]
+A-R = [":toggle-option rulers [] [120]"]
 
 [keys.insert]
 j = { k = "normal_mode" } # Maps `jk` to exit insert mode
