@@ -1,5 +1,5 @@
-inherits = "catppuccin_macchiato"
 "ui.linenr" = { fg = "overlay2"  }
 "ui.linenr.selected" = { bg = "surface0" }
+inherits = "catppuccin_mocha"
 "ui.background" = {}
  "ui.virtual.inlay-hint" = { fg = "overlay2", bg = "mantle" }
