@@ -9,3 +9,8 @@ command = "swiftlint"
 name = "typescript"
 auto-format = true
 formatter = { command = "bun eslint", args = ["--fix"] }
+
+[[language]]
+name = "markdown"
+auto-format = true
+formatter = { command = "mdformat", args = ["-", "--wrap", "120"] }
