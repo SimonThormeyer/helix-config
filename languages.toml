@@ -4,3 +4,8 @@ cargo.target = "wasm32-unknown-unknown"
 
 [language-server.swiftlint]
 command = "swiftlint"
+
+[[language]]
+name = "typescript"
+auto-format = true
+formatter = { command = "bun eslint", args = ["--fix"] }
