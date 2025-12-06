@@ -12,6 +12,7 @@ command = "swiftlint"
 [[language]]
 name = "rust"
 language-servers = ["rust-analyzer", "harper-ls"]
+formatter = { command = "rustfmt", args = ["+nightly", "--emit", "stdout"], cwd = "workspace" }
 
 [[language]]
 name = "typescript"
