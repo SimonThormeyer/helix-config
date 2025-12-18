@@ -34,9 +34,14 @@ C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_befor
 # Launch lazygit
 C-g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
 
+
 [keys.normal.space]
 A-L = [":toggle-option line-number relative absolute"]
 A-R = [":toggle-option rulers [] [120]"]
+
+# Inline git blame
+b = ":sh git log -n 5 --format='format:%%h (%%an: %%ar) %%s' --no-patch -L%{cursor_line},+1:%{buffer_name}"
+C-b = ":sh git log -n 1 --format='format:%%h' --no-patch -L%{cursor_line},+1:%{buffer_name} | pbcopy"
 
 [keys.insert]
 j = { k = "normal_mode" } # Maps `jk` to exit insert mode
