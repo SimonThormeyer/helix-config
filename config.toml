@@ -34,6 +34,9 @@ C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_befor
 # Launch lazygit
 C-g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
 
+# Inline git blame
+C-b = ":sh git blame -L %{cursor_line},%{cursor_line} %{buffer_name}"
+
 [keys.normal.space]
 A-L = [":toggle-option line-number relative absolute"]
 A-R = [":toggle-option rulers [] [120]"]
