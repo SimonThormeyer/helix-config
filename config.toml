@@ -31,13 +31,6 @@ display-inlay-hints = true
 [keys.normal]
 C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
-# Launch lazygit
-C-v = [
-  ":write-all",
-  ":insert-output lazygit >/dev/tty",
-  ":redraw",
-  ":reload-all",
-]
 C-r = [
     ":write-all",
     ":insert-output scooter --no-stdin >/dev/tty",
@@ -58,9 +51,21 @@ e = [
   ':redraw',
 ]
 
+# --- git
+[keys.normal.space.g]
+# Launch lazygit
+l = [
+  ":write-all",
+  ":insert-output lazygit >/dev/tty",
+  ":reload-all",
+  ":redraw",
+]
+
 # Inline git blame
 b = ":sh git log -n 5 --format='format:%%h (%%an: %%ar) %%s' --no-patch -L%{cursor_line},+1:%{buffer_name}"
-C-b = ":sh git log -n 1 --format='format:%%h' --no-patch -L%{cursor_line},+1:%{buffer_name} | pbcopy"
+y = ":sh git log -n 1 --format='format:%%h' --no-patch -L%{cursor_line},+1:%{buffer_name} | pbcopy"
+p = "changed_file_picker"
+r = ":reset-diff-change"
 
 [keys.insert]
 j = { k = "normal_mode" } # Maps `jk` to exit insert mode
