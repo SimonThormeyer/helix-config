@@ -32,7 +32,12 @@ display-inlay-hints = true
 C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 # Launch lazygit
-C-g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
+C-v = [
+  ":write-all",
+  ":insert-output lazygit >/dev/tty",
+  ":redraw",
+  ":reload-all",
+]
 
 
 [keys.normal.space]
