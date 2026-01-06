@@ -45,10 +45,18 @@ C-r = [
     ":reload-all"
 ]
 
-
 [keys.normal.space]
 A-L = [":toggle-option line-number relative absolute"]
 A-R = [":toggle-option rulers [] [120]"]
+
+# Replace built-in explorer with yazi
+e = [
+  ':sh rm -f /tmp/unique-file-h21a434',
+  ':insert-output yazi "%{buffer_name}" --chooser-file=/tmp/unique-file-h21a434',
+  ':sh printf "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+  ':open %sh{cat /tmp/unique-file-h21a434}',
+  ':redraw',
+]
 
 # Inline git blame
 b = ":sh git log -n 5 --format='format:%%h (%%an: %%ar) %%s' --no-patch -L%{cursor_line},+1:%{buffer_name}"
