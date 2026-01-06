@@ -67,6 +67,12 @@ y = ":sh git log -n 1 --format='format:%%h' --no-patch -L%{cursor_line},+1:%{buf
 p = "changed_file_picker"
 r = ":reset-diff-change"
 
+# --- Buffer
+[keys.normal.space.b]
+p = "buffer_picker"
+c = ":buffer-close"
+o = ":buffer-close-others"
+
 [keys.insert]
 j = { k = "normal_mode" } # Maps `jk` to exit insert mode
 
