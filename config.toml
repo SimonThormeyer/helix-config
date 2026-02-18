@@ -17,11 +17,6 @@ after-delay.timeout = 500
 [editor.indent-guides]
 render = true
 
-[editor.cursor-shape]
-insert = "bar"
-normal = "block"
-select = "underline"
-
 [editor.file-picker]
 hidden = false
 
