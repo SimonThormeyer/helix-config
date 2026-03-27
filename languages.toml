@@ -30,3 +30,10 @@ formatter = { command = "bun eslint", args = ["--fix"] }
 name = "markdown"
 auto-format = true
 formatter = { command = "mdformat", args = ["-", "--wrap", "120"] }
+
+[[language]]
+name = "adoc"
+scope = "source.adoc"
+file-types = ["adoc"]
+text-width = 120
+soft-wrap = { enable = true, wrap-at-text-width = true  }
