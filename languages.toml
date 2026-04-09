@@ -1,6 +1,6 @@
 [language-server.rust-analyzer.config]
 check.command = "clippy"
-cargo.target = "wasm32-unknown-unknown"
+# Cargo.target = "wasm32-unknown-unknown"
 
 [language-server.kotlin-language-server]
 command = "bash"
@@ -37,3 +37,10 @@ scope = "source.adoc"
 file-types = ["adoc"]
 text-width = 120
 soft-wrap = { enable = true, wrap-at-text-width = true, max-wrap = 120  }
+
+[[language]]
+name = "make"
+language-servers = ["make-ls"]
+
+[language-server.make-ls]
+command = "/Users/simon/go/bin/make-ls"
